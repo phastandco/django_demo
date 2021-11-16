@@ -1,0 +1,32 @@
+<!-- Pour le css contenu dans le dossier static (voir déclaration à la toute fin de settings.py) --> 
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<header>
+
+    <title> Accueil </title>
+    <meta charset = "UTF-8" />
+    <!-- Accès au dossier static -->
+    <link rel = "stylesheet" href = "{% static 'css/main.css' %}">
+</header>
+
+<body>
+    {% include 'login/header.html' %}
+    {% include 'login/navbar.html' %}
+
+    <p><h3> Accueil </h3></p>
+
+    <div id = "helloText">
+        Page d'accueil du site
+    </div>
+
+    <div id = "connect">
+    </div>
+
+
+    <image src = "{% static 'images/carte_95.gif' %}" alt="carte 95 est introuvable" />
+
+    {% include 'login/footer.html' %}
+</body>
+</html>

@@ -5,7 +5,7 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return HttpResponse('Home Page')
+    return render(request, 'login/index.html')
 
 
 def login(request):
@@ -16,6 +16,9 @@ def register(request):
     return render(request, 'login/register.html')
 
 
-def connect(request):
-    return HttpResponse('Connect Page')
+def admin(request):
+    return render(request, 'login/admin.html')
 
+
+def connected(request):
+    return render(request, 'login/connected.html')
